@@ -10,6 +10,7 @@ Aqui estão organizados os códigos utilizados nas **videoaulas** e nas **ativid
 > Com base nas videoaulas disponibilizadas no Teams:
 >
 > **Estou em: Trilha 01 — Aula 01**
+>
 > **A trilha começa em 01/10/26**
 
 ## Conteúdo
