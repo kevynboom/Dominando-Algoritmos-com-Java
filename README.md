@@ -3,17 +3,10 @@
 Repositório destinado ao armazenamento dos códigos desenvolvidos durante o minicurso **Dominando Algoritmos com Java**, do programa **TIC em Trilhas**, 
 oferecido durante minha **CST em Análise e Desenvolvimento de Sistemas**.
 
-Aqui estão organizados os códigos utilizados nas **videoaulas** e nas **atividades práticas** do minicurso.
+Aqui estão guardados somente os códigos das **atividades práticas** do minicurso.
 
 ## Progresso
 
 > Com base nas videoaulas disponibilizadas no Teams:
 >
-> **A trilha começa em 01/10/26**
->
-> **Estou em: Trilha 01 — Aula 01**
-
-## Conteúdo
-
-* Códigos desenvolvidos durante as aulas
-* Exercícios práticos de programação em Java
+> **Estou em: Trilha 02 — Aula 01**
