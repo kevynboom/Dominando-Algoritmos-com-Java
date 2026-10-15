@@ -1,7 +1,6 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-// 3. Faça um programa que calcule a média de um aluno, a partir de três notas informadas pelo usuário.
 public class Ex03_MediaDeNotas {
     public static void main(String[] args) {
         Locale.setDefault(new Locale("pt", "BR"));

@@ -1,8 +1,6 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-// 8. Faça um programa para calcular o total de uma venda de açaí a partir das quantidades compradas para cada tamanho: pequeno, médio e grande,
-// sabendo que o valor do açaí é R$ 13,50, R$ 15,00 e R$ 17,50 respectivamente. O programa também deve receber o valor do cupom de desconto em porcentagem.
 public class Ex08_Acaiteria {
     public static void main(String[] args) {
         Locale.setDefault(new Locale("pt", "BR"));

@@ -1,7 +1,6 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-// 7. Faça um programa que calcule o tempo que um livro será lido por uma pessoa a partir do nome do livro, do total de páginas e do tempo em segundos de leitura por página.
 public class Ex07_VoceLeRapido {
     public static void main(String[] args) {
         Locale.setDefault(new Locale("pt", "BR"));

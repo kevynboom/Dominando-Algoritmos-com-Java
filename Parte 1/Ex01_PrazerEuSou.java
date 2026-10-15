@@ -1,7 +1,6 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-// 1. Faça um programa que apresente um estudante universitário considerando seu nome, curso que estuda, semestre atual e seu hobby favorito.
 public class Ex01_PrazerEuSou {
     public static void main(String[] args) {
         Locale.setDefault(new Locale("pt", "BR"));
@@ -13,6 +12,7 @@ public class Ex01_PrazerEuSou {
         int semestre;
         String hobby;
 
+        System.out.println("--- Prazer, Eu Sou... ---");
         System.out.print("Digite o seu nome: ");
         nome = sc.nextLine();
 

@@ -1,7 +1,6 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-// 5. Faça um programa para calcular o valor final de uma compra, a partir do valor da compra e do cupom de desconto. O cupom diz a porcentagem do desconto.
 public class Ex05_CompraOnline {
     public static void main(String[] args) {
         Locale.setDefault(new Locale("pt", "BR"));

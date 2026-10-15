@@ -1,7 +1,6 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-// 6. Faça um programa para calcular o IMC de uma pessoa, a partir de sua altura e peso. A fórmula para calcular o IMC é: peso / altura².
 public class Ex06_CuidandoDaSaude {
     public static void main(String[] args) {
         Locale.setDefault(new Locale("pt", "BR"));

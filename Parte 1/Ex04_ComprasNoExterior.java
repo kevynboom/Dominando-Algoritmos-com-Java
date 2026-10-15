@@ -1,7 +1,6 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-// 4. Faça um programa para simular a conversão de um valor em real para dólar. Considere a cotação do dólar em R$ 5,42.
 public class Ex04_ComprasNoExterior {
     public static void main(String[] args) {
         Locale.setDefault(new Locale("pt", "BR"));
