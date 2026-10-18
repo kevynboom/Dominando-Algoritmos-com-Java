@@ -1,9 +1,7 @@
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Ex02_ChurrascoDeDomingo {
     public static void main(String[] args) {
-        Locale.setDefault(new Locale("pt", "BR"));
         Scanner sc = new Scanner(System.in);
 
         int pessoas;

@@ -1,9 +1,7 @@
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Ex03_MediaDeNotas {
     public static void main(String[] args) {
-        Locale.setDefault(new Locale("pt", "BR"));
         Scanner sc = new Scanner(System.in);
 
         float nota1, nota2, nota3;
