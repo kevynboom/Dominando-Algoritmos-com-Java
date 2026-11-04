@@ -35,7 +35,6 @@ public class Ex31_AnaliseTurma {
                 menor = notas[i];
             }
         }
-
         double media = soma / n;
 
         System.out.println("\n>> Resultado da Turma <<");

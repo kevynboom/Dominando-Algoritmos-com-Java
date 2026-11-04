@@ -6,7 +6,6 @@ public class Ex32_AnaliseFaturamento {
 
         System.out.print("Digite a quantidade de meses analisados: ");
         int n = sc.nextInt();
-
         double[] faturamento = new double[n];
 
         for (int i = 0; i < n; i++) {
