@@ -1,41 +1,59 @@
 import java.util.Scanner;
 
 public class Ex47_CaixaMercado {
-    static Scanner sc = new Scanner(System.in);
-    static double total = 0;
-    static int parcelas;
-
-    public static void coletarDados() {
+    static double coletarCompras(Scanner sc) {
+        double total = 0;
         double valor;
 
         do {
-            valor = sc.nextDouble();
+            System.out.print("Digite o valor da compra (0 para encerrar): ");
+            valor = Double.parseDouble(sc.nextLine().replace(",", "."));
 
             if (valor < 0) {
-                System.out.println("Valor inválido: " + (int) valor);
-            } else if (valor > 0) {
-                total += valor;
+                exibirValorInvalido(valor);
+            } else {
+                total = processarTotal(total, valor);
             }
         } while (valor != 0);
 
-        parcelas = sc.nextInt();
+        return total;
     }
 
-    public static void processarDados() {
+    static double processarTotal(double total, double valor) {
+        return total + valor;
+    }
+
+    static int coletarParcelas(Scanner sc) {
+        System.out.print("Em quantas vezes deseja parcelar? ");
+        return Integer.parseInt(sc.nextLine());
+    }
+
+    static double processarParcela(double total, int parcelas) {
+        return total / parcelas;
+    }
+
+    static void exibirValorInvalido(double valor) {
+        System.out.printf("Valor inválido: %.2f%n", valor);
+    }
+
+    static void exibirResultado(double total, int parcelas, double valorParcela) {
         if (parcelas <= 1) {
-            System.out.printf("Pagamento à vista: R$ %.0f%n", total);
+            System.out.printf("Pagamento à vista: R$ %.2f%n", total);
         } else {
-            System.out.printf("Total da compra: R$ %.0f%n", total);
-            System.out.printf("Parcelado em %dx de R$ %.2f%n", parcelas, total / parcelas);
+            System.out.printf("Total da compra: R$ %.2f%n", total);
+            System.out.printf("Parcelado em %dx de R$ %.2f%n", parcelas, valorParcela);
         }
     }
 
-    public static void exibirResultado() {
-    }
-
     public static void main(String[] args) {
-        coletarDados();
-        processarDados();
-        exibirResultado();
+        Scanner sc = new Scanner(System.in);
+
+        double total = coletarCompras(sc);
+        int parcelas = coletarParcelas(sc);
+        double valorParcela = parcelas > 1 ? processarParcela(total, parcelas) : total;
+
+        exibirResultado(total, parcelas, valorParcela);
+
+        sc.close();
     }
 }

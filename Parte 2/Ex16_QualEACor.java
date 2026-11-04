@@ -24,7 +24,6 @@ public class Ex16_QualEACor {
         } else {
             System.out.println("A combinação resulta em:\n" + cor1);
         }
-
         sc.close();
     }
 }

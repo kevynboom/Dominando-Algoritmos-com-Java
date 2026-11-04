@@ -1,41 +1,51 @@
 import java.util.Scanner;
 
 public class Ex46_IngressosCinema {
-    static Scanner sc = new Scanner(System.in);
-    static int inteiras, meias;
-    static String dia;
-    static boolean nacional;
-    static double total;
-
-    public static void coletarDados() {
-        inteiras = sc.nextInt();
-        meias = sc.nextInt();
-        sc.nextLine();
-        dia = sc.nextLine();
-        nacional = sc.nextLine().equalsIgnoreCase("Sim");
+    static int coletarInteiras(Scanner sc) {
+        System.out.print("Quantidade de ingressos inteiras: ");
+        return Integer.parseInt(sc.nextLine());
     }
 
-    public static void processarDados() {
-        double valor = 28.50;
-
-        if (nacional) {
-            valor = 5.00;
-            total = (inteiras + meias) * valor;
-        } else if (dia.equalsIgnoreCase("Quarta-feira")) {
-            valor = 14.50;
-            total = (inteiras + meias) * valor;
-        } else {
-            total = (inteiras * valor) + (meias * (valor / 2));
-        }
+    static int coletarMeias(Scanner sc) {
+        System.out.print("Quantidade de ingressos meias: ");
+        return Integer.parseInt(sc.nextLine());
     }
 
-    public static void exibirResultado() {
-        System.out.printf("Total à pagar:%nR$ %.2f%n", total);
+    static String coletarDia(Scanner sc) {
+        System.out.print("Digite o dia da semana: ");
+        return sc.nextLine();
+    }
+
+    static boolean coletarNacional(Scanner sc) {
+        System.out.print("O filme é nacional? (Sim ou Não): ");
+        return sc.nextLine().equalsIgnoreCase("sim");
+    }
+
+    static double processarTotal(int inteiras, int meias, String dia, boolean nacional) {
+        double valorIngresso = switch (dia.toLowerCase()) {
+            case "quarta-feira" -> nacional ? 5.00 : 14.50;
+            default -> nacional ? 5.00 : 28.50;
+        };
+
+        return (inteiras + meias) * valorIngresso;
+    }
+
+    static void exibirResultado(double total) {
+        System.out.printf("Total à pagar: R$ %.2f%n", total);
     }
 
     public static void main(String[] args) {
-        coletarDados();
-        processarDados();
-        exibirResultado();
+        Scanner sc = new Scanner(System.in);
+
+        int inteiras = coletarInteiras(sc);
+        int meias = coletarMeias(sc);
+        String dia = coletarDia(sc);
+        boolean nacional = coletarNacional(sc);
+
+        double total = processarTotal(inteiras, meias, dia, nacional);
+
+        exibirResultado(total);
+
+        sc.close();
     }
 }

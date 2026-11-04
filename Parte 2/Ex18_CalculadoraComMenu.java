@@ -10,15 +10,13 @@ public class Ex18_CalculadoraComMenu {
         System.out.print("Digite o primeiro número: ");
         double n1 = sc.nextDouble();
 
-        sc.nextLine(); // Limpando buffer
-
+        sc.nextLine();
         System.out.print("Digite a operação: ");
         String op = sc.nextLine();
         
         System.out.print("Digite o segundo número: ");
         double n2 = sc.nextDouble();
 
-        // Pesquisei como normalizar porque não queria fazer um switch-case para cada tipo de escrita
         String opNormalizada = Normalizer.normalize(op, Normalizer.Form.NFD)
                                         .replaceAll("\\p{M}", "")
                                         .toLowerCase()
@@ -33,7 +31,6 @@ public class Ex18_CalculadoraComMenu {
             case "^", "potencia" -> System.out.printf("%.2f ^ %.2f = %.2f\n", n1, n2, Math.pow(n1, n2));
             default -> System.out.println("Operação não suportada");
         }
-
         sc.close();
     }
 }

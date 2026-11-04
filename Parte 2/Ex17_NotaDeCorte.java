@@ -22,7 +22,6 @@ public class Ex17_NotaDeCorte {
         } else {
             System.out.println("Lista de Espera");
         }
-
         sc.close();
     }
 }

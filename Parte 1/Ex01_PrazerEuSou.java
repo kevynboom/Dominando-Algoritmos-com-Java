@@ -4,11 +4,8 @@ public class Ex01_PrazerEuSou {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Variáveis
-        String nome;
-        String curso;
+        String nome, curso, hobby;
         int semestre;
-        String hobby;
 
         System.out.println("--- Prazer, Eu Sou... ---");
         System.out.print("Digite o seu nome: ");
@@ -20,8 +17,7 @@ public class Ex01_PrazerEuSou {
         System.out.print("Digite apenas o número correspondente ao semestre em que você está no momento: ");
         semestre = sc.nextInt();
 
-        sc.nextLine(); // Limpa o '\n' deixado pelo nextInt()
-
+        sc.nextLine();
         System.out.print("Digite o seu hobby favorito: ");
         hobby = sc.nextLine();
 
@@ -30,7 +26,6 @@ public class Ex01_PrazerEuSou {
         System.out.println("Curso: " + curso);
         System.out.println("Semestre atual: " + semestre + "° Semestre");
         System.out.println("Hobby: " + hobby);
-
         sc.close();
     }
 }

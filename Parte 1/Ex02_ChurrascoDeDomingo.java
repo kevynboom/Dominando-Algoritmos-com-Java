@@ -38,11 +38,8 @@ public class Ex02_ChurrascoDeDomingo {
         System.out.printf("Carne: %.2f kg - R$%.2f%n", carneTotal, custoCarne);
         System.out.printf("Linguiça: %.2f kg - R$%.2f%n", linguicaTotal, custoLinguica);
         System.out.printf("Frango: %.2f kg - R$%.2f%n", frangoTotal, custoFrango);
-
         System.out.printf("%nCusto total: R$%.2f%n", custoTotal);
         System.out.printf("Cada pessoa deve pagar: R$%.2f%n", valorPorPessoa);
-
-        // Que exercício maluco XD
         sc.close();
     }
 }

@@ -23,9 +23,7 @@ public class Ex20_IngressosParaOCinema {
         }
 
         double total = (qtdInteiras * precoIngresso) + (qtdMeias * (precoIngresso / 2.0));
-
         System.out.printf("Total à pagar:\nR$ %.2f\n", total);
-
         sc.close();
     }
 }

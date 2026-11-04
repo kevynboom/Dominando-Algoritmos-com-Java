@@ -48,7 +48,6 @@ public class Ex33_Doacoes {
         } else {
             System.out.println("Situação: Meta não atingida");
         }
-
         sc.close();
     }
 }

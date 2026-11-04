@@ -2,76 +2,77 @@ import java.util.Scanner;
 
 public class Ex44_CalculadoraComMenu {
 
-    public static String[] coletarDados(Scanner sc) {
-        String[] dados = new String[3];
-
-        dados[0] = sc.next();
-        dados[1] = sc.next();
-        dados[2] = sc.next();
-
-        return dados;
+    public static double coletarPrimeiroValor(Scanner sc) {
+        System.out.print("Digite o primeiro valor: ");
+        return sc.nextDouble();
     }
 
-    public static String[] processarDados(String[] dados) {
-        double n1 = Double.parseDouble(dados[0]);
-        double n2 = Double.parseDouble(dados[1]);
+    public static double coletarSegundoValor(Scanner sc) {
+        System.out.print("Digite o segundo valor: ");
+        return sc.nextDouble();
+    }
 
-        String operacao = dados[2];
+    public static String coletarOperacao(Scanner sc) {
+        sc.nextLine();
+
+        System.out.println("\n===== CALCULADORA =====");
+        System.out.println("1. Soma");
+        System.out.println("2. Subtração");
+        System.out.println("3. Multiplicação");
+        System.out.println("4. Divisão");
+        System.out.println("5. Resto");
+        System.out.println("6. Potência");
+        System.out.print("Escolha uma operação: ");
+
+        return sc.nextLine().toLowerCase();
+    }
+
+    public static double processarDados(double valor1, double valor2, String operacao) {
+        return switch (operacao) {
+            case "1", "soma" -> valor1 + valor2;
+            case "2", "subtração", "subtracao" -> valor1 - valor2;
+            case "3", "multiplicação", "multiplicacao" -> valor1 * valor2;
+            case "4", "divisão", "divisao" -> valor2 != 0 ? valor1 / valor2 : Double.NaN;
+            case "5", "resto" -> valor2 != 0 ? valor1 % valor2 : Double.NaN;
+            case "6", "potência", "potencia" -> Math.pow(valor1, valor2);
+            default -> Double.NaN;
+        };
+    }
+
+    public static void exibirResultado(double valor1, double valor2, String operacao, double resultado) {
+        if (Double.isNaN(resultado)) {
+            if (operacao.equals("4") || operacao.equals("divisão") || operacao.equals("divisao") ||
+                operacao.equals("5") || operacao.equals("resto")) {
+                System.out.println("Não é possível dividir por zero.");
+            } else {
+                System.out.println("Operação não suportada.");
+            }
+            return;
+        }
+
         String simbolo = "";
-        double resultado = 0;
-        boolean valida = true;
 
-        if (operacao.equals("1") || operacao.equalsIgnoreCase("Soma")) {
-            simbolo = "+";
-            resultado = n1 + n2;
-
-        } else if (operacao.equals("2") || operacao.equalsIgnoreCase("Subtração")) {
-            simbolo = "-";
-            resultado = n1 - n2;
-
-        } else if (operacao.equals("3") || operacao.equalsIgnoreCase("Multiplicação")) {
-            simbolo = "*";
-            resultado = n1 * n2;
-
-        } else if (operacao.equals("4") || operacao.equalsIgnoreCase("Divisão")) {
-            simbolo = "/";
-            resultado = n1 / n2;
-
-        } else if (operacao.equals("5") || operacao.equalsIgnoreCase("Resto")) {
-            simbolo = "mod";
-            resultado = n1 % n2;
-
-        } else if (operacao.equals("6") || operacao.equalsIgnoreCase("Potência")) {
-            simbolo = "^";
-            resultado = Math.pow(n1, n2);
-
-        } else {
-            valida = false;
+        switch (operacao) {
+            case "1", "soma" -> simbolo = "+";
+            case "2", "subtração", "subtracao" -> simbolo = "-";
+            case "3", "multiplicação", "multiplicacao" -> simbolo = "*";
+            case "4", "divisão", "divisao" -> simbolo = "/";
+            case "5", "resto" -> simbolo = "mod";
+            case "6", "potência", "potencia" -> simbolo = "^";
         }
 
-        String[] resposta = new String[3];
-
-        resposta[0] = simbolo;
-        resposta[1] = String.valueOf(resultado);
-        resposta[2] = String.valueOf(valida);
-
-        return resposta;
-    }
-
-    public static void exibirResultado(String[] dados, String[] resposta) {
-        if (resposta[2].equals("true")) {
-            System.out.println(dados[0] + " " + resposta[0] + " " + dados[1] + " = " + resposta[1]);
-        } else {
-            System.out.println("Operação não suportada");
-        }
+        System.out.printf("%.1f %s %.1f = %.1f%n", valor1, simbolo, valor2, resultado);
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String[] dados = coletarDados(sc);
-        String[] resposta = processarDados(dados);
-        exibirResultado(dados, resposta);
+        double valor1 = coletarPrimeiroValor(sc);
+        double valor2 = coletarSegundoValor(sc);
+        String operacao = coletarOperacao(sc);
+        double resultado = processarDados(valor1, valor2, operacao);
+
+        exibirResultado(valor1, valor2, operacao, resultado);
 
         sc.close();
     }

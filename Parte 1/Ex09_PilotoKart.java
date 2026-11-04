@@ -4,12 +4,8 @@ public class Ex09_PilotoKart {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        float tamanhoPista;
+        float tamanhoPista, tempoPrimeiraVolta, distanciaTotal, tempoTotal;
         int quantidadeVoltas;
-        float tempoPrimeiraVolta;
-
-        float distanciaTotal;
-        float tempoTotal;
 
         System.out.println("--- Performance do Piloto ---");
         System.out.print("Digite o tamanho da pista em metros: ");
@@ -21,13 +17,12 @@ public class Ex09_PilotoKart {
         System.out.print("Digite o tempo da primeira volta em segundos: ");
         tempoPrimeiraVolta = sc.nextFloat();
 
-        distanciaTotal = (tamanhoPista * quantidadeVoltas) / 1000; // Calculando a distância total em quilômetros
-        tempoTotal = (tempoPrimeiraVolta * quantidadeVoltas) / 60; // Calculando o tempo total em minutos
+        distanciaTotal = (tamanhoPista * quantidadeVoltas) / 1000; 
+        tempoTotal = (tempoPrimeiraVolta * quantidadeVoltas) / 60;
 
         System.out.println("\n--- Resultado ---");
         System.out.printf("Distância total da corrida: %.2f km%n", distanciaTotal);
         System.out.printf("Previsão de tempo: %.2f minutos%n", tempoTotal);
-
         sc.close();
     }
 }

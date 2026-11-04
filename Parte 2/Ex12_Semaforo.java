@@ -15,7 +15,6 @@ public class Ex12_Semaforo {
         } else {
             System.out.println("Farol inoperante");
         }
-
         sc.close();
     }
 }

@@ -4,9 +4,7 @@ public class Ex06_CuidandoDaSaude {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        float peso;
-        float altura;
-        float imc;
+        float peso, altura, imc;
 
         System.out.println("--- Calculadora de IMC ---");
         System.out.print("Digite o seu peso em kg: ");
@@ -15,13 +13,12 @@ public class Ex06_CuidandoDaSaude {
         System.out.print("Digite a sua altura em metros: ");
         altura = sc.nextFloat();
 
-        imc = peso / (altura * altura); // Calculando o IMC
+        imc = peso / (altura * altura);
 
         System.out.println("\n--- Resultado ---");
         System.out.printf("Peso: %.2f kg%n", peso);
         System.out.printf("Altura: %.2f m%n", altura);
         System.out.printf("IMC: %.2f%n", imc);
-
         sc.close();
     }
 }

@@ -16,7 +16,6 @@ public class Ex27_Fatorial {
             }
             System.out.printf("O fatorial de %d é %d.\n", numero, fatorial);
         }
-
         sc.close();
     }
 }

@@ -1,52 +1,37 @@
 import java.util.Scanner;
 
 public class Ex34_FarmaZoom {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        System.out.print("Digite a quantidade de medicamentos: ");
         int qtd = sc.nextInt();
-        int[] farmaciaA = new int[qtd];
-        int[] farmaciaB = new int[qtd];
-        int maisBaratosA = 0;
-        int maisBaratosB = 0;
-        int mesmoPreco = 0;
-        int totalA = 0;
-        int totalB = 0;
+
+        int[] farmaciaA = new int[qtd], farmaciaB = new int[qtd];
+        int maisBaratosA = 0, maisBaratosB = 0, mesmoPreco = 0, totalA = 0, totalB = 0;
 
         for (int i = 0; i < qtd; i++) {
+            System.out.printf("Digite o preço do medicamento %d na Farmácia A: ", i + 1);
             farmaciaA[i] = sc.nextInt();
             totalA += farmaciaA[i];
         }
 
         for (int i = 0; i < qtd; i++) {
+            System.out.printf("Digite o preço do medicamento %d na Farmácia B: ", i + 1);
             farmaciaB[i] = sc.nextInt();
             totalB += farmaciaB[i];
         }
 
-        System.out.println("FARMAZOOM");
-
+        System.out.println("\nFARMAZOOM");
         System.out.print("Farmácia A: ");
         for (int i = 0; i < qtd; i++) {
-            System.out.print(farmaciaA[i]);
-
-            if (i < qtd - 1) {
-                System.out.print(", ");
-            }
+            System.out.printf("%d%s", farmaciaA[i], i < qtd - 1 ? ", " : "\n");
         }
-
-        System.out.println();
 
         System.out.print("Farmácia B: ");
         for (int i = 0; i < qtd; i++) {
-            System.out.print(farmaciaB[i]);
-
-            if (i < qtd - 1) {
-                System.out.print(", ");
-            }
+            System.out.printf("%d%s", farmaciaB[i], i < qtd - 1 ? ", " : "\n");
         }
-
-        System.out.println();
 
         for (int i = 0; i < qtd; i++) {
             if (farmaciaA[i] < farmaciaB[i]) {
@@ -59,13 +44,13 @@ public class Ex34_FarmaZoom {
         }
 
         System.out.println("\nProdutos mais Baratos");
-        System.out.println("Na Farmácia A: " + maisBaratosA);
-        System.out.println("Na Farmácia B: " + maisBaratosB);
-        System.out.println("Mesmo preço: " + mesmoPreco);
+        System.out.printf("Na Farmácia A: %d%n", maisBaratosA);
+        System.out.printf("Na Farmácia B: %d%n", maisBaratosB);
+        System.out.printf("Mesmo preço: %d%n", mesmoPreco);
 
         System.out.println("\nTotal");
-        System.out.println("Farmácia A: R$ " + totalA);
-        System.out.println("Farmácia B: R$ " + totalB);
+        System.out.printf("Farmácia A: R$ %d%n", totalA);
+        System.out.printf("Farmácia B: R$ %d%n", totalB);
 
         System.out.println("\nMelhor opção");
 
@@ -76,7 +61,6 @@ public class Ex34_FarmaZoom {
         } else {
             System.out.println("Empate");
         }
-
         sc.close();
     }
 }

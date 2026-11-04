@@ -8,7 +8,6 @@ public class Ex22_Calculadora {
         do {
             System.out.print("Digite a opção: ");
             opcao = sc.nextInt();
-
             if (opcao == 0) {
                 System.out.println("Fim.");
             } else if (opcao >= 1 && opcao <= 4) {
@@ -33,7 +32,6 @@ public class Ex22_Calculadora {
                 System.out.println("Opção inválida");
             }
         } while (opcao != 0);
-
         sc.close();
     }
 }

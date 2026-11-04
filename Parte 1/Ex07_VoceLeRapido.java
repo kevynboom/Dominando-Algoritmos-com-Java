@@ -5,9 +5,7 @@ public class Ex07_VoceLeRapido {
         Scanner sc = new Scanner(System.in);
 
         String nomeLivro;
-        int paginas;
-        int segundosPorPagina;
-        int tempoTotal;
+        int paginas, segundosPorPagina, tempoTotal;
 
         System.out.println("--- Tempo de Leitura ---");
         System.out.print("Digite o nome do livro: ");
@@ -19,14 +17,13 @@ public class Ex07_VoceLeRapido {
         System.out.print("Digite o tempo em segundos para ler cada página: ");
         segundosPorPagina = sc.nextInt();
 
-        tempoTotal = paginas * segundosPorPagina; // Calculando o tempo total de leitura
+        tempoTotal = paginas * segundosPorPagina;
 
         System.out.println("\n--- Resultado ---");
         System.out.println("Livro: " + nomeLivro);
         System.out.println("Total de páginas: " + paginas);
         System.out.println("Tempo por página: " + segundosPorPagina + " segundos");
         System.out.println("Tempo total de leitura: " + tempoTotal + " segundos");
-
         sc.close();
     }
 }

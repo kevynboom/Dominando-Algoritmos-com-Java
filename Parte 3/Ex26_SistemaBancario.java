@@ -37,7 +37,6 @@ public class Ex26_SistemaBancario {
                 default -> System.out.println("Opção inválida");
             }
         } while (opcao != 0);
-
         sc.close();
     }
 }

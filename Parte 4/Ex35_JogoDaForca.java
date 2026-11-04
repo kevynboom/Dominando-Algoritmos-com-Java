@@ -1,41 +1,46 @@
 import java.util.Scanner;
 
 public class Ex35_JogoDaForca {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String palavra = sc.next().toUpperCase();
-        int tamanho = palavra.length();
-        char[] secreta = new char[tamanho];
-        char[] estado = new char[tamanho];
-
-        for (int i = 0; i < tamanho; i++) {
-            secreta[i] = palavra.charAt(i);
-            estado[i] = '_';
-        }
+        System.out.print("Digite a palavra secreta: ");
+        char[] palavra = sc.nextLine().toUpperCase().toCharArray();
 
         for (int i = 0; i < 30; i++) {
             System.out.println();
         }
 
+        char[] estado = new char[palavra.length];
         int erros = 0;
-        int descobertas = 0;
 
-        while (erros < 7 && descobertas < tamanho) {
-            char letra = sc.next().toUpperCase().charAt(0);
+        for (int i = 0; i < estado.length; i++) {
+            estado[i] = '_';
+        }
+
+        while (erros < 7) {
+            boolean acertou = true;
+
+            for (int i = 0; i < estado.length; i++) {
+                if (estado[i] == '_') {
+                    acertou = false;
+                    break;
+                }
+            }
+
+            if (acertou) {
+                break;
+            }
+
+            System.out.print("Digite uma letra: ");
+            char letra = sc.nextLine().toUpperCase().charAt(0);
+
             boolean encontrou = false;
 
-            for (int i = 0; i < tamanho; i++) {
-
-                if (secreta[i] == letra) {
-
+            for (int i = 0; i < palavra.length; i++) {
+                if (palavra[i] == letra) {
+                    estado[i] = letra;
                     encontrou = true;
-
-                    if (estado[i] == '_') {
-                        estado[i] = letra;
-                        descobertas++;
-                    }
                 }
             }
 
@@ -43,22 +48,27 @@ public class Ex35_JogoDaForca {
                 erros++;
             }
 
-            System.out.print("Forca: ");
-
-            for (int i = 0; i < tamanho; i++) {
-                System.out.print(estado[i]);
+            System.out.print("\nEstado: ");
+            for (int i = 0; i < estado.length; i++) {
+                System.out.printf("%c%s", estado[i], i < estado.length - 1 ? " " : "\n");
             }
 
-            System.out.println();
-
-            System.out.println("Erros: " + erros);
-            System.out.println();
+            System.out.printf("Erros: %d%n", erros);
         }
 
-        if (descobertas == tamanho) {
-            System.out.println("Parabéns! Você descobriu a palavra.");
+        boolean venceu = true;
+
+        for (int i = 0; i < estado.length; i++) {
+            if (estado[i] == '_') {
+                venceu = false;
+                break;
+            }
+        }
+
+        if (venceu) {
+            System.out.println("\nParabéns! Você descobriu a palavra.");
         } else {
-            System.out.println("Você perdeu! A palavra era: " + palavra);
+            System.out.printf("%nVocê perdeu! A palavra era: %s%n", new String(palavra));
         }
 
         sc.close();

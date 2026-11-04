@@ -15,7 +15,6 @@ public class Ex13_DiaPorExtenso {
             case 6 -> System.out.println("Sábado");
             default -> System.out.println("Dia da semana inválido");
         }
-
         sc.close();
     }
 }

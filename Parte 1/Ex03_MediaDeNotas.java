@@ -4,8 +4,7 @@ public class Ex03_MediaDeNotas {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        float nota1, nota2, nota3;
-        float media;
+        float nota1, nota2, nota3, media;
 
         System.out.println("--- Média do Aluno ---");
         System.out.print("Digite a primeira nota: ");
@@ -17,11 +16,10 @@ public class Ex03_MediaDeNotas {
         System.out.print("Digite a terceira nota: ");
         nota3 = sc.nextFloat();
 
-        media = (nota1 + nota2 + nota3) / 3; // Calculando a média
+        media = (nota1 + nota2 + nota3) / 3;
 
         System.out.println("\n--- Resultado ---");
         System.out.printf("Média do aluno: %.2f%n", media);
-
         sc.close();
     }
 }

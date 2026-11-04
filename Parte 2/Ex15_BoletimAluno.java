@@ -34,7 +34,6 @@ public class Ex15_BoletimAluno {
                 System.out.println("Situação: Recuperação");
             }
         }
-
         sc.close();
     }
 }

@@ -16,7 +16,6 @@ public class Ex11_OrcamentoFamiliar {
         } else {
             System.out.println("Você está fora do orçamento! Não gaste mais!");
         }
-
         sc.close();
     }
 }

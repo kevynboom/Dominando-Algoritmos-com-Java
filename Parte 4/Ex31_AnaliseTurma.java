@@ -9,8 +9,7 @@ public class Ex31_AnaliseTurma {
 
         double[] notas = new double[n];
         double soma = 0;
-        int aprovados = 0;
-        int reprovados = 0;
+        int aprovados = 0, reprovados = 0;
 
         for (int i = 0; i < n; i++) {
             System.out.printf("Digite a nota do aluno %d (0 a 10): ", (i + 1));
@@ -58,7 +57,6 @@ public class Ex31_AnaliseTurma {
         } else {
             System.out.println("Situação geral: Nem todos os alunos foram aprovados");
         }
-
         sc.close();
     }
 }

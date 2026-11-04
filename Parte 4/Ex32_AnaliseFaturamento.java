@@ -13,9 +13,7 @@ public class Ex32_AnaliseFaturamento {
             faturamento[i] = sc.nextDouble();
         }
 
-        boolean cresceu = true;
-        boolean caiu = true;
-        boolean constante = true;
+        boolean cresceu = true, caiu = true, constante = true;
 
         for (int i = 1; i < n; i++) {
             if (faturamento[i] > faturamento[i - 1]) {
@@ -46,7 +44,6 @@ public class Ex32_AnaliseFaturamento {
         } else {
             System.out.println("Situação: Sem padrão");
         }
-
         sc.close();
     }
 }

@@ -40,7 +40,6 @@ public class Ex19_MensalidadeUniversidade {
             }
             System.out.printf("Valor da mensalidade:\nR$ %.2f\n", valor);
         }
-
         sc.close();
     }
 }

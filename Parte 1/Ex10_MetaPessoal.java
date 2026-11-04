@@ -5,14 +5,7 @@ public class Ex10_MetaPessoal {
         Scanner sc = new Scanner(System.in);
 
         String descricaoMeta;
-
-        float valorMeta;
-        float salario;
-        float despesas;
-        float valorRestante;
-        float economiaFixa;
-        float valorMensal;
-        float tempo;
+        float valorMeta, salario, despesas, valorRestante, economiaFixa, valorMensal, tempo;
 
         System.out.println("--- Meta Pessoal ---");
         System.out.print("Digite a descrição da meta: ");
@@ -27,10 +20,10 @@ public class Ex10_MetaPessoal {
         System.out.print("Digite o total das despesas mensais: R$");
         despesas = sc.nextFloat();
 
-        valorRestante = salario - despesas; // Calculando o valor restante após as despesas
-        economiaFixa = valorRestante * 30 / 100; // Reservando 30% do valor restante como economia fixa
-        valorMensal = valorRestante - economiaFixa; // O restante poderá ser destinado à meta
-        tempo = valorMeta / valorMensal; // Calculando o tempo necessário para alcançar a meta
+        valorRestante = salario - despesas; 
+        economiaFixa = valorRestante * 30 / 100; 
+        valorMensal = valorRestante - economiaFixa; 
+        tempo = valorMeta / valorMensal;
 
         System.out.println("\n--- Resultado ---");
         System.out.println("Meta: " + descricaoMeta);
@@ -38,7 +31,6 @@ public class Ex10_MetaPessoal {
         System.out.printf("Valor reservado para economia: R$%.2f%n", economiaFixa);
         System.out.printf("Valor destinado à meta por mês: R$%.2f%n", valorMensal);
         System.out.printf("Tempo para alcançar a meta: %.2f meses%n", tempo);
-
         sc.close();
     }
 }
