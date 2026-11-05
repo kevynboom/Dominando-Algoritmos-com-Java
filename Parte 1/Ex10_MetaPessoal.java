@@ -5,7 +5,7 @@ public class Ex10_MetaPessoal {
         Scanner sc = new Scanner(System.in);
 
         String descricaoMeta;
-        float valorMeta, salario, despesas, valorRestante, economiaFixa, valorMensal, tempo;
+        double valorMeta, salario, despesas, valorRestante, economiaFixa, valorMensal, tempo;
 
         System.out.println("--- Meta Pessoal ---");
         System.out.print("Digite a descrição da meta: ");

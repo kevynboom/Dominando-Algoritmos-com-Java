@@ -4,7 +4,7 @@ public class Ex09_PilotoKart {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        float tamanhoPista, tempoPrimeiraVolta, distanciaTotal, tempoTotal;
+        double tamanhoPista, tempoPrimeiraVolta, distanciaTotal, tempoTotal;
         int quantidadeVoltas;
 
         System.out.println("--- Performance do Piloto ---");

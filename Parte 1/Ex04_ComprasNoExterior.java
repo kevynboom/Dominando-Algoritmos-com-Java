@@ -4,7 +4,7 @@ public class Ex04_ComprasNoExterior {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        float valorReais, valorDolar, cotacao = 5.42f;
+        double valorReais, valorDolar, cotacao = 5.42f;
 
         System.out.println("--- Conversor de Real para Dólar ---");
         System.out.print("Digite o valor em reais: R$");

@@ -4,7 +4,7 @@ public class Ex06_CuidandoDaSaude {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        float peso, altura, imc;
+        double peso, altura, imc;
 
         System.out.println("--- Calculadora de IMC ---");
         System.out.print("Digite o seu peso em kg: ");

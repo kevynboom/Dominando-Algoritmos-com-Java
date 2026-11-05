@@ -5,7 +5,7 @@ public class Ex08_Acaiteria {
         Scanner sc = new Scanner(System.in);
 
         int pequeno, medio, grande;
-        float desconto, valorTotal, valorDesconto, valorFinal;
+        double desconto, valorTotal, valorDesconto, valorFinal;
 
         System.out.println("--- Venda de Açaí ---");
         System.out.print("Digite a quantidade de açaí pequeno: ");

@@ -4,7 +4,7 @@ public class Ex03_MediaDeNotas {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        float nota1, nota2, nota3, media;
+        double nota1, nota2, nota3, media;
 
         System.out.println("--- Média do Aluno ---");
         System.out.print("Digite a primeira nota: ");

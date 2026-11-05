@@ -4,7 +4,7 @@ public class Ex05_CompraOnline {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        float valorCompra, desconto, valorDesconto, valorFinal;
+        double valorCompra, desconto, valorDesconto, valorFinal;
 
         System.out.println("--- Calculadora de Desconto ---");
         System.out.print("Digite o valor da compra: R$");
